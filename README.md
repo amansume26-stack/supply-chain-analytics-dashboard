@@ -75,6 +75,105 @@ making it difficult to:
 - 📌 Highlighted **delivery bottlenecks** affecting customer satisfaction
 - 📌 Monitored **warehouse capacity** to optimize storage efficiency
 ---
+## 🗄️ SQL Queries — Supply Chain Analytics
+
+> **Tool:** MySQL Workbench
+> **Database:** SupplyChainDB
+> **Tables:** 4 Dimension Tables + 2 Fact Tables (Star Schema)
+
+---
+
+## 📐 Database Schema
+
+### Dimension Tables
+| Table | Description |
+|-------|-------------|
+| 🧑 Dim_Customer | Customer region, city, segment |
+| 🏭 Dim_Warehouse | Warehouse location & capacity |
+| 🤝 Dim_Supplier | Supplier details & reliability score |
+| 📦 Dim_Product | Product category, cost & price |
+
+### Fact Tables
+| Table | Description |
+|-------|-------------|
+| 📋 Fact_Orders | Orders, delivery, revenue & COGS |
+| 📊 Fact_Inventory | Stock levels, reorder & stockout |
+
+---
+
+## 📊 KPI Queries Written
+
+| # | KPI | Query Type |
+|---|-----|------------|
+| 1 | 💰 Total Revenue | SUM Aggregation |
+| 2 | 📈 Gross Margin % | Revenue vs COGS |
+| 3 | 🚛 On-Time Delivery % | CASE + COUNT |
+| 4 | 📦 Fill Rate % | Shipped vs Ordered |
+| 5 | ⭐ Perfect Order Rate | Multi-condition CASE |
+| 6 | ⏰ Average Delay Days | AVG Aggregation |
+| 7 | 🔄 Inventory Turnover | Units Shipped / Avg Stock |
+| 8 | ⚠️ Stockout Rate | Flag Aggregation |
+| 9 | 🤝 Supplier Reliability | JOIN + CASE + GROUP BY |
+| 10 | 🌍 Revenue by Region | JOIN + GROUP BY + ORDER BY |
+
+---
+## 🔍 SQL Concepts Used
+
+| Concept | Used In |
+|---------|---------|
+| ✅ CREATE DATABASE & TABLE | Schema Setup |
+| ✅ PRIMARY KEY & DATA TYPES | Table Design |
+| ✅ JOINS (INNER JOIN) | Supplier & Customer Analysis |
+| ✅ GROUP BY & ORDER BY | Regional & Supplier Reports |
+| ✅ CASE WHEN | Delivery & Order Status |
+| ✅ UNION ALL | Table Row Count Verification |
+| ✅ Aggregate Functions | SUM, AVG, COUNT |
+| ✅ Subqueries & CTEs | KPI Calculations |
+| ✅ DECIMAL & VARCHAR | Data Type Management |
+| ✅ Star Schema Design | Fact & Dimension Tables |
+
+---
+
+## 💡 Sample Queries
+
+### 💰 Total Revenue
+```sql
+SELECT SUM(Revenue) AS Total_Revenue 
+FROM Fact_Orders;
+```
+
+### 🚛 On-Time Delivery %
+```sql
+SELECT 
+COUNT(CASE WHEN Delivery_Status = 'On-Time' 
+      THEN 1 END) * 100.0 / COUNT(*) AS OTD
+FROM Fact_Orders;
+```
+
+### 🤝 Supplier Reliability
+```sql
+SELECT 
+    S.Supplier_Name,
+    COUNT(CASE WHEN F.Delivery_Status='On-Time' 
+          THEN 1 END) * 100.0 / COUNT(*) AS Reliability
+FROM Fact_Orders F
+JOIN Dim_Supplier S 
+    ON F.Supplier_ID = S.Supplier_ID
+GROUP BY S.Supplier_Name;
+```
+
+### 🌍 Revenue by Region
+```sql
+SELECT 
+    dc.Customer_Region,
+    ROUND(SUM(fo.Revenue), 2) AS Revenue
+FROM Fact_Orders fo
+JOIN Dim_Customer dc
+    ON fo.Customer_ID = dc.Customer_ID
+GROUP BY dc.Customer_Region
+ORDER BY Revenue DESC;
+
+---
 ## 📸 Dashboard Screenshots
 
 ### 📊 Power BI Dashboard
@@ -85,9 +184,6 @@ making it difficult to:
 
 ### 📉 Tableau Dashboard
 ![Tableau](images/tableau_dashboard.png)
-
-### 🗄️ SQL Queries
-![MySQL](images/sql_queries.png)
 
 ### 📐 Data Model
 ![Star Schema](images/data_model.png)
