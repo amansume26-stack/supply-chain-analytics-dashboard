@@ -78,7 +78,7 @@ making it difficult to:
 ## 📸 Dashboard Screenshots
 
 ### 📊 Power BI Dashboard
-
+(https://github.com/amansume26-stack/supply-chain-analytics-dashboard/blob/main/Snapshot%20of%20Dashbaord.png)
 
 ### 📈 Excel Dashboard  
 ![Excel](images/excel_dashboard.png)
