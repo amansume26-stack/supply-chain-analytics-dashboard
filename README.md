@@ -4,7 +4,7 @@
 
 ## 📌 Project Overview
 An end-to-end **Supply Chain Analytics Dashboard** built to analyze and monitor 
-sales performance, inventory management, supplier reliability, warehouse 
+sales performance, inventory management, supplier reliability, and warehouse 
 utilization, and delivery efficiency — all in one centralized dashboard.
 ---
 ## 🎯 Business Problem
@@ -172,15 +172,16 @@ JOIN Dim_Customer dc
     ON fo.Customer_ID = dc.Customer_ID
 GROUP BY dc.Customer_Region
 ORDER BY Revenue DESC;
+```
 
 ---
-<h2>📊 Dashboard Snapshots</h2>
+## 📊 Dashboard Snapshots
 
-<h3>Power BI Dashboard</h3>
-<img src="./Snapshot%20of%20Dashboard.png" width="1000">
+### Power BI Dashboard
 
+![Power BI Dashboard](Snapshot%20of%20Dashboard.png)
 
-## 📈 Tableau Dashboard
+### Tableau Dashboard
 
-![Tableau Dashboard](https://raw.githubusercontent.com/amansume26-stack/supply-chain-analytics-dashboard/main/Snapshot%20of%20Tableau%20Dashboard.png)
+![Tableau Dashboard](Snapshot%20of%20Tableau%20Dashboard.png)
 
