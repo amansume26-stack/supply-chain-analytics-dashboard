@@ -179,6 +179,7 @@ ORDER BY Revenue DESC;
 <h3>Power BI Dashboard</h3>
 <img src="./Snapshot%20of%20Dashboard.png" width="1000">
 
-<h3>Tableau Dashboard</h3>
-<img src="https://github.com/amansume26-stack/supply-chain-analytics-dashboard/blob/main/Snapshot%20of%20Tableau%20Dashboard.png?raw=true" width="1000">
 
+## 📈 Tableau Dashboard
+
+![Tableau Dashboard](https://raw.githubusercontent.com/amansume26-stack/supply-chain-analytics-dashboard/main/Snapshot%20of%20Tableau%20Dashboard.png)
