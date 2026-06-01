@@ -174,17 +174,11 @@ GROUP BY dc.Customer_Region
 ORDER BY Revenue DESC;
 
 ---
-## 📸 Dashboard Screenshots
+<h2>📊 Dashboard Snapshots</h2>
 
-### 📊 Power BI Dashbaoard
-Snapshot of Dashbaord.png
+<h3>Power BI Dashboard</h3>
+<img src="./Snapshot%20of%20Dashboard.png" width="1000">
 
-### 📈 Excel Dashboard  
-![Excel](images/excel_dashboard.png)
+<h3>Tableau Dashboard</h3>
+<img src="./Snapshot%20of%20Tableau%20Dashboard.png" width="1000">
 
-### 📉 Tableau Dashboard
-https://github.com/amansume26-stack/supply-chain-analytics-dashboard/blob/main/Snapshot%20of%20Tableau%20Dashbaord.png
-
-### 📐 Data Model
-![Star Schema](images/data_model.png)
-                   
