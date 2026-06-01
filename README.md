@@ -182,4 +182,5 @@ ORDER BY Revenue DESC;
 
 ## 📈 Tableau Dashboard
 
-![Tableau Dashboard](https://raw.githubusercontent.com/amansume26-stack/supply-chain-analytics-dashboard/main/Snapshot%20of%20Tableau%20Dashboard.png)
+![Tableau Dashboard] (Snapshot of Tableau Dashboard.png)
+
