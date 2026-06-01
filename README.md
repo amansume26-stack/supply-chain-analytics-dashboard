@@ -179,7 +179,7 @@ ORDER BY Revenue DESC;
 
 ### Power BI Dashboard
 
-![Power BI Dashboard](Snapshot%20of%20Dashboard.png)
+![Power BI Dashboard](Snapshot of Power BI Dashboard .png)
 
 ### Tableau Dashboard
 
