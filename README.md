@@ -183,7 +183,7 @@ https://github.com/amansume26-stack/supply-chain-analytics-dashboard/blob/main/S
 ![Excel](images/excel_dashboard.png)
 
 ### 📉 Tableau Dashboard
-![Tableau](images/tableau_dashboard.png)
+https://github.com/amansume26-stack/supply-chain-analytics-dashboard/blob/main/Snapshot%20of%20Tableau%20Dashbaord.png
 
 ### 📐 Data Model
 ![Star Schema](images/data_model.png)
