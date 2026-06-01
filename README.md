@@ -176,9 +176,8 @@ ORDER BY Revenue DESC;
 ---
 ## 📸 Dashboard Screenshots
 
-### 📊 Power BI Dashboard
-
-<img width="1000" alt="Power BI Dashboard" src="https://raw.githubusercontent.com/amansume26-stack/supply-chain-analytics-dashboard/main/Snapshot%20of%20Dashboard.png">
+### 📊 Power BI Dashbaoard
+Snapshot of Dashbaord.png
 
 ### 📈 Excel Dashboard  
 ![Excel](images/excel_dashboard.png)
