@@ -177,11 +177,11 @@ ORDER BY Revenue DESC;
 ---
 ## 📊 Dashboard Snapshots
 
-### Power BI Dashboard
+## 📊 Power BI Dashboard
 
-![Power BI Dashboard](Snapshot of Power BI Dashboard .png)
+![Power BI Dashboard](Snapshot%20of%20Power%20BI%20Dashboard.png)
 
-### Tableau Dashboard
+### 📊 Tableau Dashboard
 
 ![Tableau Dashboard](Snapshot%20of%20Tableau%20Dashboard.png)
 
