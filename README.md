@@ -104,6 +104,25 @@ Before this project, decisions were based on gut feeling and manual spreadsheets
 
 2 Fact Tables: Fact_Orders | Fact_Inventory
 
+```
+                    ┌─────────────────┐
+                    │   Dim_Customer  │
+                    │  Customer_ID PK │
+                    └────────┬────────┘
+                             │
+┌──────────────┐    ┌────────▼────────┐    ┌──────────────────┐
+│ Dim_Supplier │    │   Fact_Orders   │    │  Dim_Warehouse   │
+│Supplier_ID PK├────┤  Order_ID PK    ├────┤ Warehouse_ID PK  │
+└──────────────┘    │  Customer_ID FK │    └──────────────────┘
+                    │  Product_ID FK  │
+┌──────────────┐    │  Supplier_ID FK │    ┌──────────────────┐
+│  Dim_Product │    │  Warehouse_ID FK│    │  Fact_Inventory  │
+│ Product_ID PK├────┤  Revenue        ├────┤  Product_ID FK   │
+└──────────────┘    │  COGS           │    │  Warehouse_ID FK │
+                    │  Delivery_Status│    │  Stockout_Flag   │
+                    └─────────────────┘    └──────────────────┘
+```
+
 ### Dimension Tables
 
 | Table | Key Fields |
